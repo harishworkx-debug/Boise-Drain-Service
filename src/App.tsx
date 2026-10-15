@@ -9,7 +9,9 @@ import About from '@/pages/About';
 import Contact from '@/pages/Contact';
 import FAQ from '@/pages/FAQ';
 import ServiceLocation from '@/pages/ServiceLocation';
+import Sitemap from '@/pages/Sitemap';
 import NotFound from '@/pages/NotFound';
+import MobileCallBar from '@/components/MobileCallBar';
 
 function App() {
   return (
@@ -25,10 +27,13 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/404" element={<NotFound />} />
             <Route path="/*" element={<ServiceLocation />} />
           </Routes>
         </main>
         <Footer />
+        <MobileCallBar />
       </div>
     </BrowserRouter>
   );

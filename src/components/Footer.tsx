@@ -12,7 +12,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-900 text-slate-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-14 pb-28 lg:pb-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Business Info */}
           <div>
@@ -140,6 +140,11 @@ export default function Footer() {
                   Services Overview
                 </Link>
               </li>
+              <li>
+                <Link to="/sitemap" className="text-sm text-slate-400 hover:text-blue-400 transition-colors">
+                  HTML Sitemap
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -148,9 +153,13 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             &copy; {new Date().getFullYear()} {businessInfo.name}. All rights reserved.
           </p>
-          <p className="text-sm text-slate-500">
-            Serving Boise, Idaho and the Treasure Valley
-          </p>
+          <div className="flex items-center gap-4 text-sm text-slate-500">
+            <span>Serving Boise, ID & Treasure Valley</span>
+            <span>•</span>
+            <Link to="/sitemap" className="hover:text-blue-400 transition-colors">
+              Sitemap
+            </Link>
+          </div>
         </div>
       </div>
     </footer>

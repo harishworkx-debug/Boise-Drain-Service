@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.boisedrainservice.com/sitemap.xml
+Sitemap: http://www.boisedrainservice.com/sitemap.xml

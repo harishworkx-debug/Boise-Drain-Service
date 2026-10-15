@@ -14,7 +14,8 @@ export function useSeo({ title, description, canonicalPath, ogImage }: SeoOption
   useEffect(() => {
     document.title = title;
 
-    const fullCanonical = `https://${businessInfo.domain}${canonicalPath || ''}`;
+    const baseUrl = businessInfo.website.replace(/\/$/, '');
+    const fullCanonical = `${baseUrl}${canonicalPath || ''}`;
 
     setMeta('description', description);
     setMeta('og:title', title, true);
@@ -72,14 +73,15 @@ export function getAllServiceLocationUrls(): { serviceSlug: string; locationSlug
 }
 
 export function generateSitemap(): string {
-  const baseUrl = `https://${businessInfo.domain}`;
+  const baseUrl = businessInfo.website.replace(/\/$/, '');
   const staticPages = [
-    { path: '/', priority: '1.0', changefreq: 'monthly' },
-    { path: '/services', priority: '0.9', changefreq: 'monthly' },
-    { path: '/service-areas', priority: '0.9', changefreq: 'monthly' },
+    { path: '/', priority: '1.0', changefreq: 'weekly' },
+    { path: '/services', priority: '0.9', changefreq: 'weekly' },
+    { path: '/service-areas', priority: '0.9', changefreq: 'weekly' },
     { path: '/about', priority: '0.7', changefreq: 'monthly' },
     { path: '/contact', priority: '0.8', changefreq: 'monthly' },
     { path: '/faq', priority: '0.7', changefreq: 'monthly' },
+    { path: '/sitemap', priority: '0.7', changefreq: 'weekly' },
   ];
 
   let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
@@ -101,7 +103,7 @@ export function generateSitemap(): string {
 }
 
 export function generateRobotsTxt(): string {
-  const baseUrl = `https://${businessInfo.domain}`;
+  const baseUrl = businessInfo.website.replace(/\/$/, '');
   return `User-agent: *
 Allow: /
 

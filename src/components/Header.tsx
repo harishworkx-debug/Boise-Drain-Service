@@ -176,15 +176,25 @@ export default function Header() {
             {businessInfo.phone}
           </a>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-slate-700 hover:text-blue-600 transition-colors"
-            aria-label="Toggle menu"
-            aria-expanded={isOpen}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
+          {/* Mobile Actions: Call Button + Menu Button */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <a
+              href={businessInfo.phoneLink}
+              className="inline-flex items-center gap-1.5 bg-blue-600 text-white px-3 py-2 rounded-lg font-bold text-xs hover:bg-blue-700 transition-colors shadow-sm"
+              aria-label={`Call ${businessInfo.phone}`}
+            >
+              <Phone className="w-3.5 h-3.5" />
+              <span>Call</span>
+            </a>
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-slate-700 hover:text-blue-600 transition-colors rounded-lg hover:bg-slate-100"
+              aria-label="Toggle menu"
+              aria-expanded={isOpen}
+            >
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Nav */}
