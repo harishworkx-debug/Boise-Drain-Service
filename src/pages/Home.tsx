@@ -36,6 +36,7 @@ import ServiceCard from '@/components/ServiceCard';
 import CallButton from '@/components/CallButton';
 import CTASection from '@/components/CTASection';
 import FAQAccordion from '@/components/FAQAccordion';
+import GoogleReviews from '@/components/GoogleReviews';
 import StructuredData, { buildLocalBusinessSchema, buildFAQSchema } from '@/components/StructuredData';
 
 const heroImage = 'https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
@@ -202,9 +203,9 @@ const seasonalTips = [
 
 export default function Home() {
   useSeo({
-    title: 'Boise Drain Service | Drain Cleaning in Boise, Idaho | 208-860-1639',
+    title: 'Drain Cleaning & Sewer Services in Boise, ID | Boise Drain Service',
     description:
-      'Professional drain cleaning and sewer repair in Boise, Idaho and Treasure Valley. Contact Boise Drain Service at 208-860-1639 for clogged drains, hydro jetting, camera inspection & main sewer backups.',
+      'Need drain cleaning or sewer service in Boise, ID? Contact Boise Drain Service for help with clogged drains, main lines, camera inspections and more. Call 208-860-1639.',
     canonicalPath: '/',
     ogImage: heroImage,
   });
@@ -215,8 +216,8 @@ export default function Home() {
 
   return (
     <>
-      <StructuredData data={buildLocalBusinessSchema()} />
-      <StructuredData data={buildFAQSchema(homeFaqs)} />
+      <StructuredData id="business" data={buildLocalBusinessSchema()} />
+      <StructuredData id="faq" data={buildFAQSchema(homeFaqs)} />
 
       {/* Hero Section */}
       <section className="relative min-h-[640px] flex items-center pt-20 bg-slate-900">
@@ -721,47 +722,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Verified Customer Reviews & Testimonials */}
-      <section className="bg-slate-50 py-16 sm:py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-14">
-            <span className="text-xs font-bold text-blue-600 uppercase tracking-widest bg-blue-100/70 px-3 py-1 rounded-full">
-              Local Feedback
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 mb-4">
-              What Treasure Valley Homeowners Say
-            </h2>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              We take pride in transparent diagnostics, honest advice, and quick resolution for plumbing clogs across Ada and Canyon counties.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {customerReviews.map((rev, idx) => (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center gap-1 mb-4 text-amber-400">
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-sm text-slate-700 leading-relaxed mb-6 italic">
-                    "{rev.quote}"
-                  </p>
-                </div>
-                <div className="pt-4 border-t border-slate-100">
-                  <div className="font-bold text-slate-900 text-base">{rev.name}</div>
-                  <div className="text-xs text-blue-600 font-semibold">{rev.city}</div>
-                  <div className="text-xs text-slate-400 mt-0.5">{rev.service}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* 9. Verified Customer Reviews & Testimonials from Google */}
+      <GoogleReviews />
 
       {/* 10. Why Contact Boise Drain Service (4 Pillars) */}
       <section className="bg-white py-16 sm:py-24">

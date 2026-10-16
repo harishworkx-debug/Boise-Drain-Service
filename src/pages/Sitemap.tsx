@@ -21,7 +21,7 @@ import { services } from '@/data/services';
 import { locations } from '@/data/locations';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import CTASection from '@/components/CTASection';
-import StructuredData, { buildLocalBusinessSchema } from '@/components/StructuredData';
+import StructuredData, { buildLocalBusinessSchema, buildBreadcrumbSchema } from '@/components/StructuredData';
 
 const heroImage = 'https://images.pexels.com/photos/14953886/pexels-photo-14953886.jpeg?auto=compress&cs=tinysrgb&h=650&w=940';
 
@@ -75,7 +75,11 @@ export default function Sitemap() {
 
   return (
     <>
-      <StructuredData data={buildLocalBusinessSchema()} />
+      <StructuredData id="business" data={buildLocalBusinessSchema()} />
+      <StructuredData
+        id="breadcrumb"
+        data={buildBreadcrumbSchema([{ label: 'Sitemap', path: '/sitemap' }])}
+      />
 
       {/* Hero Section */}
       <section className="relative pt-28 pb-16 bg-slate-900">
@@ -129,6 +133,19 @@ export default function Sitemap() {
       <section className="bg-slate-50 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
+          {/* Technical Note Callout */}
+          <div className="bg-blue-50/80 border border-blue-200 rounded-2xl p-4 sm:p-5 mb-8 flex items-start gap-3.5">
+            <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+            <div className="text-xs text-blue-950 leading-relaxed">
+              <strong className="font-bold text-blue-900">HTML Directory vs. Search Engine XML Sitemap: </strong>
+              This readable directory is curated for human visitors to navigate all core pages, services, and local Treasure Valley resources. For search engine crawlers (Googlebot, Bingbot), our technically validated index is maintained separately at{' '}
+              <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-blue-700">
+                /sitemap.xml
+              </a>{' '}
+              following the official Sitemap 0.9 XML protocol.
+            </div>
+          </div>
+
           {/* Search Bar & XML Link */}
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="relative w-full md:max-w-md">
