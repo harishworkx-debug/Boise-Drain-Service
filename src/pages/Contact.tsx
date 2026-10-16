@@ -37,9 +37,9 @@ export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   useSeo({
-    title: 'Contact Boise Drain Service | Call 208-860-1639 | Boise, ID',
+    title: 'Contact Boise Drain Service | Call 208-768-0044 | Boise, ID',
     description:
-      'Contact Boise Drain Service for fast drain cleaning and sewer diagnostics in Boise, ID. Call 208-860-1639 or submit an online service request. Fast Treasure Valley response.',
+      'Contact Boise Drain Service for fast drain cleaning and sewer diagnostics in Boise, ID. Call 208-768-0044 or submit an online service request. Fast Treasure Valley response.',
     canonicalPath: '/contact',
     ogImage: heroImage,
   });

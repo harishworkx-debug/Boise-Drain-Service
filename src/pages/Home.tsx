@@ -205,7 +205,7 @@ export default function Home() {
   useSeo({
     title: 'Drain Cleaning & Sewer Services in Boise, ID | Boise Drain Service',
     description:
-      'Need drain cleaning or sewer service in Boise, ID? Contact Boise Drain Service for help with clogged drains, main lines, camera inspections and more. Call 208-860-1639.',
+      'Need drain cleaning or sewer service in Boise, ID? Contact Boise Drain Service for help with clogged drains, main lines, camera inspections and more. Call 208-768-0044.',
     canonicalPath: '/',
     ogImage: heroImage,
   });
@@ -246,7 +246,7 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <CallButton variant="primary" size="lg" label="Call (208) 860-1639" />
+              <CallButton variant="primary" size="lg" label="Call (208) 768-0044" />
               <Link
                 to="/services"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 text-base sm:text-lg font-semibold text-white border-2 border-white/80 rounded-xl hover:bg-white hover:text-slate-900 transition-all backdrop-blur-xs shadow-lg"
@@ -353,7 +353,7 @@ export default function Home() {
                   href={businessInfo.phoneLink}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm shadow-md transition-all"
                 >
-                  <Phone className="w-4 h-4" /> Call 208-860-1639
+                  <Phone className="w-4 h-4" /> Call 208-768-0044
                 </a>
               </div>
             </div>
@@ -436,7 +436,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <CallButton variant="primary" size="md" label="Speak With Our Team (208) 860-1639" />
+              <CallButton variant="primary" size="md" label="Speak With Our Team (208) 768-0044" />
             </div>
 
             <div className="relative">
@@ -782,7 +782,7 @@ export default function Home() {
               {
                 step: '1',
                 title: 'Call and Describe the Problem',
-                text: 'Call (208) 860-1639 and speak directly with our team. Describe which fixtures are acting up, how long it has been occurring, and whether multiple drains are backed up.',
+                text: 'Call (208) 768-0044 and speak directly with our team. Describe which fixtures are acting up, how long it has been occurring, and whether multiple drains are backed up.',
               },
               {
                 step: '2',

@@ -33,7 +33,7 @@ export default function About() {
   useSeo({
     title: 'About Boise Drain Service | Local Drain & Sewer Specialists',
     description:
-      'Learn about Boise Drain Service: experienced local drain cleaning technicians, commercial-grade cameras and jetters, and verifiable workmanship standards. Call 208-860-1639.',
+      'Learn about Boise Drain Service: experienced local drain cleaning technicians, commercial-grade cameras and jetters, and verifiable workmanship standards. Call 208-768-0044.',
     canonicalPath: '/about',
     ogImage: aboutHero,
   });
@@ -59,7 +59,7 @@ export default function About() {
     {
       icon: Clock,
       title: 'Direct Technician Communication',
-      desc: 'No answering services or third-party call centers. When you call 208-860-1639, you speak directly with an experienced technician who understands your problem.',
+      desc: 'No answering services or third-party call centers. When you call 208-768-0044, you speak directly with an experienced technician who understands your problem.',
     },
   ];
 
@@ -118,7 +118,7 @@ export default function About() {
               Locally owned and based in Boise, Idaho, we specialize exclusively in professional drain cleaning, camera diagnostics, and sewer line solutions across the entire Treasure Valley.
             </p>
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <CallButton variant="primary" size="lg" label="Call (208) 860-1639" />
+              <CallButton variant="primary" size="lg" label="Call (208) 768-0044" />
               <div className="text-xs text-slate-400 sm:border-l sm:border-slate-700 sm:pl-4">
                 <span className="font-semibold text-slate-200">Owner-Operated Focus: </span>
                 <span>Real technicians, honest diagnostics, and transparent pricing.</span>
@@ -332,7 +332,7 @@ export default function About() {
       {/* Bottom CTA */}
       <CTASection
         headline="Have Questions for Our Drain Team?"
-        subtext="Speak directly with our local technicians at 208-860-1639. We're happy to discuss your specific drainage issue and provide straightforward guidance."
+        subtext="Speak directly with our local technicians at 208-768-0044. We're happy to discuss your specific drainage issue and provide straightforward guidance."
         bgClass="bg-slate-900"
       />
     </>

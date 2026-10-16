@@ -16,7 +16,7 @@ export default function CTASection({
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">{headline}</h2>
         <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">{subtext}</p>
-        <CallButton variant="primary" size="lg" label="Call 208-860-1639" />
+        <CallButton variant="primary" size="lg" label="Call 208-768-0044" />
       </div>
     </section>
   );

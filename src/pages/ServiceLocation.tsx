@@ -53,8 +53,8 @@ export default function ServiceLocation() {
   // Custom SEO titles and descriptions based on intent
   const seoTitle = `${service.name} in ${location.name}, ${location.state} | Boise Drain Service`;
   const seoDescription = detail?.categoryIntent
-    ? `${detail.categoryIntent.slice(0, 115)} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-860-1639 for direct technician service.`
-    : `${service.shortDescription} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-860-1639.`;
+    ? `${detail.categoryIntent.slice(0, 115)} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-768-0044 for direct technician service.`
+    : `${service.shortDescription} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-768-0044.`;
 
   useSeo({
     title: seoTitle,
@@ -137,7 +137,7 @@ export default function ServiceLocation() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <CallButton variant="primary" size="lg" label="Call 208-860-1639" />
+              <CallButton variant="primary" size="lg" label="Call 208-768-0044" />
               <div className="text-xs text-slate-400 sm:border-l sm:border-slate-700 sm:pl-4 flex flex-col justify-center">
                 <span className="font-semibold text-slate-200">Need immediate help?</span>
                 <span>Speak directly with an experienced technician today.</span>
@@ -530,7 +530,7 @@ export default function ServiceLocation() {
                 <p className="text-xs text-slate-300 leading-relaxed mb-5">
                   Describe your drainage problem directly to an experienced professional serving {location.name}, {location.state}.
                 </p>
-                <CallButton variant="primary" size="md" label="Call 208-860-1639" className="w-full" />
+                <CallButton variant="primary" size="md" label="Call 208-768-0044" className="w-full" />
                 <p className="text-[11px] text-slate-400 mt-3">
                   Direct dispatch • Transparent assessment • No call centers
                 </p>
@@ -596,7 +596,7 @@ export default function ServiceLocation() {
       {/* Bottom CTA */}
       <CTASection
         headline={`Dealing with a Drain Issue in ${location.name}?`}
-        subtext={`Call 208-860-1639 to consult with Boise Drain Service. We provide honest diagnostics and reliable solutions across ${location.name} and the Treasure Valley.`}
+        subtext={`Call 208-768-0044 to consult with Boise Drain Service. We provide honest diagnostics and reliable solutions across ${location.name} and the Treasure Valley.`}
         bgClass="bg-slate-900"
       />
     </>

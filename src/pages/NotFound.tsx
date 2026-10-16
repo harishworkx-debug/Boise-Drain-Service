@@ -7,7 +7,7 @@ import CallButton from '@/components/CallButton';
 export default function NotFound() {
   useSeo({
     title: 'Page Not Found | Boise Drain Service',
-    description: 'The page you are looking for could not be found. Please call Boise Drain Service at 208-860-1639 or visit our homepage.',
+    description: 'The page you are looking for could not be found. Please call Boise Drain Service at 208-768-0044 or visit our homepage.',
     canonicalPath: '/404',
   });
 
@@ -33,7 +33,7 @@ export default function NotFound() {
             <Home className="w-5 h-5" />
             Back to Homepage
           </Link>
-          <CallButton variant="secondary" size="md" label="Call 208-860-1639" />
+          <CallButton variant="secondary" size="md" label="Call 208-768-0044" />
         </div>
 
         <div className="bg-white rounded-xl p-6 border border-slate-200">

@@ -28,7 +28,7 @@ export default function FAQ() {
   useSeo({
     title: 'Frequently Asked Questions | Boise Drain Service',
     description:
-      'Answers to common questions about drain clogs, camera inspections, hydro jetting, response times, estimates, and safety limitations. Call 208-860-1639.',
+      'Answers to common questions about drain clogs, camera inspections, hydro jetting, response times, estimates, and safety limitations. Call 208-768-0044.',
     canonicalPath: '/faq',
     ogImage: heroImage,
   });
@@ -87,7 +87,7 @@ export default function FAQ() {
             </p>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <CallButton variant="primary" size="lg" label="Call (208) 860-1639" />
+              <CallButton variant="primary" size="lg" label="Call (208) 768-0044" />
               <div className="text-xs text-slate-400 sm:border-l sm:border-slate-700 sm:pl-4">
                 <span className="font-semibold text-slate-200">Have a specific question? </span>
                 <span>Speak directly with our on-duty technicians anytime.</span>
@@ -189,7 +189,7 @@ export default function FAQ() {
                 Describe your symptoms directly to our technician team. We provide honest answers with zero obligation.
               </p>
             </div>
-            <CallButton variant="primary" size="md" label="Call 208-860-1639" />
+            <CallButton variant="primary" size="md" label="Call 208-768-0044" />
           </div>
         </div>
       </section>

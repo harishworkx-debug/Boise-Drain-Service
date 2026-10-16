@@ -163,7 +163,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
         stepNumber: '01',
         title: 'Initial Intake & Fixture Assessment',
         description:
-          'When you call 208-860-1639, you speak directly with a technician. We review which fixtures are sluggish, check if multiple drains are affected, and locate the nearest cleanout or trap access point.',
+          'When you call 208-768-0044, you speak directly with a technician. We review which fixtures are sluggish, check if multiple drains are affected, and locate the nearest cleanout or trap access point.',
       },
       {
         stepNumber: '02',
@@ -301,7 +301,7 @@ export const serviceDetails: Record<string, ServiceDetail> = {
       {
         question: 'When should I call for a professional drain cleaning instead of plunging?',
         answer:
-          'If a light plunger plunge does not restore flow after 2–3 attempts, or if water bubbles up into a nearby fixture when you plunge, stop immediately. Continuing to plunge can force seals loose or blow dirty water out of vent stacks. Call us at 208-860-1639 for a safe assessment.',
+          'If a light plunger plunge does not restore flow after 2–3 attempts, or if water bubbles up into a nearby fixture when you plunge, stop immediately. Continuing to plunge can force seals loose or blow dirty water out of vent stacks. Call us at 208-768-0044 for a safe assessment.',
       },
     ],
   },
