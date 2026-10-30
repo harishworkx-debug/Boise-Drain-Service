@@ -37,9 +37,9 @@ export default function Contact() {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   useSeo({
-    title: 'Contact Boise Drain Service | Call 208-768-0044 | Boise, ID',
+    title: 'Contact Boise Drain Service | Call (208) 768-0044 | Boise, ID',
     description:
-      'Contact Boise Drain Service for fast drain cleaning and sewer diagnostics in Boise, ID. Call 208-768-0044 or submit an online service request. Fast Treasure Valley response.',
+      'Contact Boise Drain Service for fast drain cleaning and sewer diagnostics in Boise, ID. Call (208) 768-0044 or submit an online service request. Fast Treasure Valley response.',
     canonicalPath: '/contact',
     ogImage: heroImage,
   });
@@ -191,7 +191,7 @@ export default function Contact() {
                         required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="e.g. 208-555-0199"
+                        placeholder="e.g. (208) 555-0123"
                         className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent text-sm bg-slate-50/50"
                       />
                     </div>
@@ -319,7 +319,7 @@ export default function Contact() {
 
                 <div className="mt-4 p-3.5 bg-blue-50/80 rounded-xl border border-blue-100 text-xs text-blue-900 leading-relaxed">
                   <strong>Emergency Sewer Response: </strong>
-                  For active sewer overflows and main line backups, our on-call emergency technician team is available 24/7. Call <a href={businessInfo.phoneLink} className="underline font-bold">{businessInfo.phone}</a>.
+                  For active sewer overflows and main line backups, our on-call technician is available for urgent response. Call <a href={businessInfo.phoneLink} className="underline font-bold">{businessInfo.phone}</a>.
                 </div>
               </div>
 

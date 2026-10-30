@@ -1,6 +1,6 @@
 export const businessInfo = {
   name: 'Boise Drain Service',
-  phone: '208-768-0044',
+  phone: '(208) 768-0044',
   phoneLink: 'tel:2087680044',
   website: 'https://www.boisedrainservice.com/',
   googleMapsLink: 'https://maps.app.goo.gl/EamNVKu6x5BjWC9g7',
@@ -111,7 +111,7 @@ export const detailedFaqs: CategorizedFaq[] = [
     categoryLabel: 'Estimates & Pricing',
     question: 'Can you give me an accurate price estimate over the phone?',
     answer:
-      'When you call 208-768-0044, you speak directly with an experienced technician who will ask targeted questions about your symptoms, the affected fixtures, and home age. We provide transparent upfront pricing ranges for standard drain snaking, hydro jetting, and camera inspections before dispatching, with zero surprise hidden fees.',
+      'When you call (208) 768-0044, you speak directly with an experienced technician who will ask targeted questions about your symptoms, the affected fixtures, and home age. We provide transparent upfront pricing ranges for standard drain snaking, hydro jetting, and camera inspections before dispatching, with zero surprise hidden fees.',
   },
   {
     category: 'estimates',

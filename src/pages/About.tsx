@@ -33,7 +33,7 @@ export default function About() {
   useSeo({
     title: 'About Boise Drain Service | Local Drain & Sewer Specialists',
     description:
-      'Learn about Boise Drain Service: experienced local drain cleaning technicians, commercial-grade cameras and jetters, and verifiable workmanship standards. Call 208-768-0044.',
+      'Learn about Boise Drain Service: experienced local drain cleaning technicians, commercial-grade cameras and jetters, and verifiable workmanship standards. Call (208) 768-0044.',
     canonicalPath: '/about',
     ogImage: aboutHero,
   });
@@ -59,7 +59,7 @@ export default function About() {
     {
       icon: Clock,
       title: 'Direct Technician Communication',
-      desc: 'No answering services or third-party call centers. When you call 208-768-0044, you speak directly with an experienced technician who understands your problem.',
+      desc: 'No answering services or third-party call centers. When you call (208) 768-0044, you speak directly with an experienced technician who understands your problem.',
     },
   ];
 
@@ -332,7 +332,7 @@ export default function About() {
       {/* Bottom CTA */}
       <CTASection
         headline="Have Questions for Our Drain Team?"
-        subtext="Speak directly with our local technicians at 208-768-0044. We're happy to discuss your specific drainage issue and provide straightforward guidance."
+        subtext="Speak directly with our local technicians at (208) 768-0044. We're happy to discuss your specific drainage issue and provide straightforward guidance."
         bgClass="bg-slate-900"
       />
     </>

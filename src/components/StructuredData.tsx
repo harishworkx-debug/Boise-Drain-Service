@@ -118,7 +118,7 @@ export function buildLocalBusinessSchema(): Record<string, unknown> {
         dayOfWeek: ['Sunday'],
         opens: '00:00',
         closes: '23:59',
-        description: '24/7 Emergency Sewer & Drain Dispatch',
+        description: 'Sunday On-Call & Urgent Sewer Dispatch',
       },
     ],
     areaServed: [

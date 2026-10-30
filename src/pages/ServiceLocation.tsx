@@ -53,8 +53,8 @@ export default function ServiceLocation() {
   // Custom SEO titles and descriptions based on intent
   const seoTitle = `${service.name} in ${location.name}, ${location.state} | Boise Drain Service`;
   const seoDescription = detail?.categoryIntent
-    ? `${detail.categoryIntent.slice(0, 115)} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-768-0044 for direct technician service.`
-    : `${service.shortDescription} Serving ${location.name}, ${location.state}. Call Boise Drain Service at 208-768-0044.`;
+    ? `${detail.categoryIntent.slice(0, 115)} Serving ${location.name}, ${location.state}. Call Boise Drain Service at (208) 768-0044 for direct technician service.`
+    : `${service.shortDescription} Serving ${location.name}, ${location.state}. Call Boise Drain Service at (208) 768-0044.`;
 
   useSeo({
     title: seoTitle,
@@ -83,10 +83,8 @@ export default function ServiceLocation() {
     { label: `${location.name}, ${location.state}`, path: canonicalPath },
   ];
 
-  // Pick matching case study or closest regional case study
-  const caseStudy =
-    detail?.caseStudies.find((c) => c.locationSlug === location.slug) ||
-    detail?.caseStudies[0];
+  // Pick matching case study for this specific location; never substitute an unrelated city
+  const localCaseStudy = detail?.caseStudies.find((c) => c.locationSlug === location.slug);
 
   const testimonial = detail?.serviceTestimonials[0];
 
@@ -137,7 +135,7 @@ export default function ServiceLocation() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <CallButton variant="primary" size="lg" label="Call 208-768-0044" />
+              <CallButton variant="primary" size="lg" label="Call (208) 768-0044" />
               <div className="text-xs text-slate-400 sm:border-l sm:border-slate-700 sm:pl-4 flex flex-col justify-center">
                 <span className="font-semibold text-slate-200">Need immediate help?</span>
                 <span>Speak directly with an experienced technician today.</span>
@@ -431,8 +429,8 @@ export default function ServiceLocation() {
                 </div>
               </div>
 
-              {/* 9. Real Treasure Valley Completed Job Case Study */}
-              {caseStudy && (
+              {/* 9. Authentic Job Case Study OR Local Dispatch Standards */}
+              {localCaseStudy ? (
                 <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 sm:p-8 text-white shadow-md">
                   <div className="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-700">
                     <div className="flex items-center gap-2.5">
@@ -442,34 +440,71 @@ export default function ServiceLocation() {
                       </span>
                     </div>
                     <span className="text-xs font-medium px-2.5 py-1 rounded bg-slate-800 text-slate-300 border border-slate-700">
-                      {caseStudy.city}, ID ({caseStudy.neighborhoodOrArea})
+                      {localCaseStudy.city}, ID ({localCaseStudy.neighborhoodOrArea})
                     </span>
                   </div>
 
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wide">Property Profile</h4>
-                      <p className="text-sm font-semibold text-white">{caseStudy.propertyType}</p>
+                      <p className="text-sm font-semibold text-white">{localCaseStudy.propertyType}</p>
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wide">Reported Problem</h4>
-                      <p className="text-sm text-slate-200 leading-relaxed">{caseStudy.problem}</p>
+                      <p className="text-sm text-slate-200 leading-relaxed">{localCaseStudy.problem}</p>
                     </div>
                     <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700">
                       <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wide mb-1">
                         Technician Diagnosis & Action Taken
                       </h4>
                       <p className="text-sm text-slate-300 leading-relaxed mb-2">
-                        {caseStudy.technicianDiagnosis}
+                        {localCaseStudy.technicianDiagnosis}
                       </p>
                       <p className="text-xs text-slate-300 leading-relaxed">
                         <strong className="text-white">Method & Equipment: </strong>
-                        {caseStudy.solutionAndEquipment}
+                        {localCaseStudy.solutionAndEquipment}
                       </p>
                     </div>
                     <div>
                       <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wide">Final Outcome</h4>
-                      <p className="text-sm text-emerald-200 leading-relaxed">{caseStudy.outcome}</p>
+                      <p className="text-sm text-emerald-200 leading-relaxed">{localCaseStudy.outcome}</p>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-6 sm:p-8 text-white shadow-md">
+                  <div className="flex items-center justify-between gap-4 mb-4 pb-4 border-b border-slate-700">
+                    <div className="flex items-center gap-2.5">
+                      <MapPin className="w-5 h-5 text-blue-400" />
+                      <span className="text-xs font-semibold uppercase tracking-wider text-blue-300">
+                        {location.name} Service Dispatch & Property Standards
+                      </span>
+                    </div>
+                    <span className="text-xs font-medium px-2.5 py-1 rounded bg-blue-900/60 text-blue-200 border border-blue-700">
+                      {location.name}, ID Service Area
+                    </span>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wide">Neighborhood Housing & Pipe Characteristics</h4>
+                      <p className="text-sm text-slate-200 leading-relaxed">
+                        {location.housingProfile} In {location.name}, properties typically feature {location.typicalPipeMaterials.toLowerCase()}.
+                      </p>
+                    </div>
+                    <div className="bg-slate-800/80 rounded-xl p-4 border border-slate-700">
+                      <h4 className="text-xs font-bold text-blue-400 uppercase tracking-wide mb-1">
+                        Drainage Diagnostic Factors
+                      </h4>
+                      <p className="text-sm text-slate-300 leading-relaxed">
+                        {location.localPlumbingNotes}
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-bold text-emerald-400 uppercase tracking-wide">Direct Technician Communication</h4>
+                      <p className="text-sm text-emerald-200 leading-relaxed">
+                        {location.serviceDispatchNote} Speak directly with Kevin Bell at {businessInfo.phone} to discuss your drain symptoms before booking.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -530,7 +565,7 @@ export default function ServiceLocation() {
                 <p className="text-xs text-slate-300 leading-relaxed mb-5">
                   Describe your drainage problem directly to an experienced professional serving {location.name}, {location.state}.
                 </p>
-                <CallButton variant="primary" size="md" label="Call 208-768-0044" className="w-full" />
+                <CallButton variant="primary" size="md" label="Call (208) 768-0044" className="w-full" />
                 <p className="text-[11px] text-slate-400 mt-3">
                   Direct dispatch • Transparent assessment • No call centers
                 </p>
@@ -596,7 +631,7 @@ export default function ServiceLocation() {
       {/* Bottom CTA */}
       <CTASection
         headline={`Dealing with a Drain Issue in ${location.name}?`}
-        subtext={`Call 208-768-0044 to consult with Boise Drain Service. We provide honest diagnostics and reliable solutions across ${location.name} and the Treasure Valley.`}
+        subtext={`Call (208) 768-0044 to consult with Boise Drain Service. We provide honest diagnostics and reliable solutions across ${location.name} and the Treasure Valley.`}
         bgClass="bg-slate-900"
       />
     </>

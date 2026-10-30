@@ -36,7 +36,7 @@ export default function Services() {
   useSeo({
     title: 'Professional Drain & Sewer Services | Boise Drain Service',
     description:
-      'Explore all drain and sewer services offered by Boise Drain Service. From mechanical drain cleaning and 4,000 PSI hydro jetting to HD camera inspections and sewer repair. Call 208-768-0044.',
+      'Explore all drain and sewer services offered by Boise Drain Service. From mechanical drain cleaning and 4,000 PSI hydro jetting to HD camera inspections and sewer repair. Call (208) 768-0044.',
     canonicalPath: '/services',
     ogImage: heroImage,
   });
@@ -264,7 +264,7 @@ export default function Services() {
       {/* Bottom CTA */}
       <CTASection
         headline="Ready to Clear Your Drain Problem?"
-        subtext="Speak directly with an experienced technician at Boise Drain Service. Call 208-768-0044 to discuss your situation and schedule prompt service."
+        subtext="Speak directly with an experienced technician at Boise Drain Service. Call (208) 768-0044 to discuss your situation and schedule prompt service."
         bgClass="bg-slate-900"
       />
     </>

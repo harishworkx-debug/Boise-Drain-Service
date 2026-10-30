@@ -205,7 +205,7 @@ export default function Home() {
   useSeo({
     title: 'Drain Cleaning & Sewer Services in Boise, ID | Boise Drain Service',
     description:
-      'Need drain cleaning or sewer service in Boise, ID? Contact Boise Drain Service for help with clogged drains, main lines, camera inspections and more. Call 208-768-0044.',
+      'Need drain cleaning or sewer service in Boise, ID? Contact Boise Drain Service for help with clogged drains, main lines, camera inspections and more. Call (208) 768-0044.',
     canonicalPath: '/',
     ogImage: heroImage,
   });
@@ -353,7 +353,7 @@ export default function Home() {
                   href={businessInfo.phoneLink}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg text-sm shadow-md transition-all"
                 >
-                  <Phone className="w-4 h-4" /> Call 208-768-0044
+                  <Phone className="w-4 h-4" /> Call (208) 768-0044
                 </a>
               </div>
             </div>

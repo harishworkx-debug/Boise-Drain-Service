@@ -24,7 +24,7 @@ export default function MobileCallBar() {
             <div className="text-left leading-tight">
               <div className="text-[11px] text-blue-100 font-medium flex items-center gap-1">
                 <ShieldCheck className="w-3.5 h-3.5 text-blue-200" />
-                <span>24/7 Direct Dispatch</span>
+                <span>Rapid Local Dispatch</span>
               </div>
               <div className="text-base font-extrabold text-white tracking-wide">
                 {businessInfo.phone}

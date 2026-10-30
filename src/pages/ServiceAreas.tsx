@@ -24,7 +24,7 @@ export default function ServiceAreas() {
   useSeo({
     title: 'Service Areas in Treasure Valley, ID | Boise Drain Service',
     description:
-      'Boise Drain Service provides professional drain cleaning and sewer diagnostics across Boise, Meridian, Eagle, Nampa, Caldwell, and the Treasure Valley. Call 208-768-0044.',
+      'Boise Drain Service provides professional drain cleaning and sewer diagnostics across Boise, Meridian, Eagle, Nampa, Caldwell, and the Treasure Valley. Call (208) 768-0044.',
     canonicalPath: '/service-areas',
     ogImage: heroImage,
   });
@@ -253,7 +253,7 @@ export default function ServiceAreas() {
       {/* Bottom CTA */}
       <CTASection
         headline="Need Drain Service in the Treasure Valley?"
-        subtext="Call 208-768-0044 to consult directly with our drain team. We'll verify current service dispatch to your neighborhood immediately."
+        subtext="Call (208) 768-0044 to consult directly with our drain team. We'll verify current service dispatch to your neighborhood immediately."
         bgClass="bg-slate-900"
       />
     </>
